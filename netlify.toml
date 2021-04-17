@@ -1,0 +1,37 @@
+# Global settings applied to the whole site.
+#
+# “publish” is the directory to publish (relative to root of your repo),
+# “command” is your build command,
+# “base” is directory to change to before starting build. if you set base:
+#    that is where we will look for package.json/.nvmrc/etc not repo root!
+
+[build]
+  publish = "dist"
+  command = "make dist"
+
+# Production context: All deploys to the main
+# repository branch will inherit these settings.
+[context.production]
+  [context.production.environment]
+    NODE_ENV = "production"
+
+  [[redirects]]
+    from = "/postal_code_at/*"
+    to = "https://api-xbhormaofa-ue.a.run.app/:splat"
+    status = 200
+
+# Here is another way to define context specific environment variables.
+[context.deploy-preview]
+  [context.deploy-preview.environment]
+    NODE_ENV = "staging"
+
+  [[redirects]]
+    from = "/postal_code_at/*"
+    to = "https://api-xbhormaofa-ue.a.run.app/:splat"
+    status = 200
+
+# The following redirect is intended for use with most SPA's that handles routing internally.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

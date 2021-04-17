@@ -1,0 +1,24 @@
+.YearInput
+  font-size: 36px
+  margin: 0.5em 0
+  letter-spacing: 0.25em
+  text-align: left
+  width: 4.1em
+  border-radius: 3px
+  border-width: 0
+  box-shadow: 0 0 2px 0 #666
+  padding: 0.25em 0 0.25em 0.5em
+  &:focus
+    outline: none
+  &::placeholder
+    color: #eee
+
+  // hide arrows webkit
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button
+    -webkit-appearance: none
+    margin: 0
+
+  // hide arrows firefox
+  &[type=number]
+    -moz-appearance: textfield
