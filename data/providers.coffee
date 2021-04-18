@@ -84,36 +84,97 @@ class Clinic extends Provider
 
 
 export default [
+  # BC
+  # https://www2.gov.bc.ca/gov/content/covid-19/vaccine
   new Province({
-    region_code: 'NL'
-    name: 'Newfoundland'
-    booking_url: ''
-    min_age: 60
+    region_code: 'BC'
+    name: 'BC Health Care System'
+    booking_url: 'https://www2.gov.bc.ca/gov/content/covid-19/vaccine/register'
+    min_age: 45
+    updated_at: '2021-04-17'
   })
 ,
-  new Province({
-    region_code: 'NS'
-    name: 'Nova Scotia'
-    booking_url: ''
-    min_age: 60
+  new Pharmacy({
+    region_code: 'BC'
+    name: 'Select Pharmacies'
+    description: md.render """
+      Many pharmacies in BC are participating in vaccination programs.
+    """
+    booking_url: 'https://www2.gov.bc.ca/gov/content/covid-19/vaccine/pharmacy'
+    min_age: 55
+    updated_at: '2021-04-17'
   })
 ,
+  # AB
+  # https://www.albertahealthservices.ca/topics/page17295.aspx
+  new Province({
+    region_code: 'AB'
+    name: 'Alberta Health Services'
+    booking_url: 'https://myhealth.alberta.ca/Journey/Immunization/Pages/CovidImmPubTool.aspx'
+    min_age: 65
+    updated_at: '2021-04-17'
+  })
+,
+  new Pharmacy({
+    region_code: 'AB'
+    name: 'Select Pharmacies'
+    description: md.render """
+      Many pharmacies in Alberta are participating in vaccination programs.
+
+      Calgary and Edmonton residents 55+ may also be eligible to book at some pharmacies.
+    """
+    booking_url: 'https://www.ab.bluecross.ca/news/covid-19-immunization-program-information.php'
+    min_age: 65
+    updated_at: '2021-04-17'
+  })
+,
+  # SK
+  # https://www.saskatchewan.ca/COVID19-vaccine.
+  new Province({
+    region_code: 'SK'
+    name: 'Saskatchewan Health Authority'
+    booking_url: 'https://www.saskatchewan.ca/government/health-care-administration-and-provider-resources/treatment-procedures-and-guidelines/emerging-public-health-issues/2019-novel-coronavirus/covid-19-vaccine/vaccine-booking#check-your-eligibility'
+    min_age: 48
+    updated_at: '2021-04-17'
+  })
+,
+  new Clinic({
+    region_code: 'SK'
+    name: 'Drive-Thru and Walk-in Clinics'
+    info_url: 'https://www.saskhealthauthority.ca/news/service-alerts-emergency-events/Pages/COVID-19-Vaccine-Drive-Thru-Wait-Times.aspx'
+    min_age: 48
+    max_age: 54
+  })
+,
+  # MB
+  # https://www.gov.mb.ca/covid19/vaccine/index.html
+  new Province({
+    region_code: 'MB'
+    name: 'Super-Sites and Pop-up Clinics'
+    info_url: 'https://www.gov.mb.ca/covid19/vaccine/eligibility-criteria.html#sites'
+    min_age: 56
+    updated_at: '2021-04-17'
+  })
+,
+  new Pharmacy({
+    region_code: 'MB'
+    name: 'Medical Clinics and Pharmacies'
+    description: md.render """
+      Many clinics and pharmacies in Manitoba are participating in vaccination programs.
+    """
+    info_url: 'https://www.gov.mb.ca/covid19/vaccine/eligibility-criteria.html#clinics-pharmacies'
+    min_age: 65
+    updated_at: '2021-04-17'
+  })
+,
+  # ON
+  # https://covid-19.ontario.ca
   new Province({
     region_code: 'ON'
-    name: 'Ontario Health Care System'
-    description: md.render """
-      Several pharmacies in Ontario are participating in vannication programs.
-    """
+    name: 'Ontario Health Services'
     booking_url: 'https://covid-19.ontario.ca/book-vaccine/'
     min_age: 60
-    # priority_groups: {
-    #   ltc
-    #   al
-    #   frontline
-    #   homecare
-    #   indigenous
-    #   high_risk_health
-    # }
+    updated_at: '2021-04-17'
   })
 ,
   new Pharmacy({
@@ -124,6 +185,7 @@ export default [
     """
     booking_url: 'https://covid-19.ontario.ca/vaccine-locations'
     min_age: 55
+    updated_at: '2021-04-17'
   })
 ,
   new Clinic({
@@ -140,6 +202,51 @@ export default [
     min_age: 18
     filter_prio_postal_code: ({postal_code=''}={})->
       postal_code in prio_postal_codes
-
   })
+,
+  # QC
+  # https://www.quebec.ca/en/health/health-issues/a-z/2019-coronavirus/progress-of-the-covid-19-vaccination#c91977
+  new Province({
+    region_code: 'QC'
+    name: 'Québec Health Services'
+    info_url: 'https://www.quebec.ca/en/health/health-issues/a-z/2019-coronavirus/progress-of-the-covid-19-vaccination#c92384'
+    min_age: 60
+    updated_at: '2021-04-17'
+  })
+,
+  new Clinic({
+    region_code: 'QC'
+    name: 'Vaccine Clinics'
+    description: """
+      Clinics have been set up where people between 55 and 79 years of age can get the AstraZeneca vaccine. See the details for the vaccination clinic nearest to you.
+    """
+    info_url: 'https://www.quebec.ca/en/health/health-issues/a-z/2019-coronavirus/progress-of-the-covid-19-vaccination#c91979'
+    min_age: 55
+    updated_at: '2021-04-17'
+  })
+,
+#   # NB
+#   #
+
+#   # NL
+#   #
+#   new Province({
+#     region_code: 'NL'
+#     name: 'Newfoundland'
+#     booking_url: ''
+#     min_age: 60
+#   })
+# ,
+#   # NS
+#   #
+#   new Province({
+#     region_code: 'NS'
+#     name: 'Nova Scotia'
+#     booking_url: ''
+#     min_age: 60
+#   })
+# ,
+#   # NL
+#   #
+
 ]
