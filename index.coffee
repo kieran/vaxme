@@ -39,10 +39,10 @@ do ->
       @state =
         locating: false
         geoError: null
-        # postal_code: null
-        # birth_year: null
-        postal_code: 'M6K'
-        birth_year: 1979
+        postal_code: null
+        birth_year: null
+        # postal_code: 'M6K'
+        # birth_year: 1979
 
     componentDidMount: ->
       @autoLocate()
