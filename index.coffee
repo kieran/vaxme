@@ -27,7 +27,7 @@ do ->
     {latitude, longitude}
 
   getPosalCode = (lat, lng)->
-    { data } = await axios.get "#{process.env.API_URL}/#{lat.toFixed 2},#{lng.toFixed 2}"
+    { data } = await axios.get "#{process.env.API_URL}/#{lat.toFixed 3},#{lng.toFixed 3}"
     data
 
   fixVh = ->
