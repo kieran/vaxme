@@ -64,9 +64,7 @@ class Provider
   filter: (attrs)=>
     # exit immediately if any filters fail
     for name, fn of @ when /^filter_/.test name
-      unless fn attrs
-        console.log 'filtered'
-        return false
+      return false unless fn attrs
 
     # exit immediately if any selects pass
     for name, fn of @ when /^select_/.test name
@@ -76,7 +74,6 @@ class Provider
     true
 
   filter_age: ({birth_year}={})=>
-    console.log @min_age, birth_year, (2021 - birth_year)
     @min_age and birth_year and @min_age <= (2021 - birth_year)
 
 class Province extends Provider
