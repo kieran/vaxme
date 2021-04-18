@@ -2,15 +2,15 @@ steps:
 
   # build the container image
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/vaxme/api', '.']
+  args: ['build', '-t', 'gcr.io/vaxmeca/api', '.']
 
   # push the container image to Container Registry
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/vaxme/api']
+  args: ['push', 'gcr.io/vaxmeca/api']
 
   # Deploy container image to Cloud Run
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['beta', 'run', 'deploy', 'api', '--image', 'gcr.io/vaxme/api', '--region', 'us-east1','--platform', 'managed', '--quiet']
+  args: ['beta', 'run', 'deploy', 'api', '--image', 'gcr.io/vaxmeca/api', '--region', 'us-east1','--platform', 'managed', '--quiet']
 
   # clean out old images
 - name: 'gcr.io/cloud-builders/gcloud-slim'
@@ -43,4 +43,4 @@ steps:
 
 
 images:
-- gcr.io/vaxme/api
+- gcr.io/vaxmeca/api

@@ -32,7 +32,7 @@ dist: install
 # Docker stuff
 #
 start_mongo:
-	mongod --fork --logpath /mongodb.log
+	mongod --fork --dbpath=/data/db --logpath=/tmp/mongodb.log  --logappend
 
 stop_mongo:
 	mongod --shutdown
@@ -48,17 +48,17 @@ seed_mongo:
 	mongo --host ${MONGO_URL} --eval 'db.postal_codes.createIndex({ geometry: "2dsphere" })'
 
 docker_build:
-	docker image build -t vaxme:1.0 .
+	docker image build --platform x86_64 -t vaxmeca:1.0 .
 
 docker_start:
-	docker run -it --publish 3000:${PORT} vaxme:1.0
+	docker run -it --publish 3000:${PORT} vaxmeca:1.0
 
 # starts mongo as a background process, returning express to the foreground
 # needs .ONESHELL directive & bash
 docker_run:
 	set -m
 	node server/index.js &
-	mongod --fork --logpath /mongodb.log
+	mongod --fork --dbpath=/data/db --logpath=/tmp/mongodb.log --logappend
 	fg %1
 
 
@@ -69,7 +69,7 @@ docker_run:
 # - https://api-xbhormaofa-ue.a.run.app
 #
 gcloud_build:
-	gcloud builds submit --tag gcr.io/vaxme/api
+	gcloud builds submit --tag gcr.io/vaxmeca/api
 
 gcloud_deploy:
-	gcloud run deploy --image gcr.io/vaxme/api --platform managed
+	gcloud run deploy --image gcr.io/vaxmeca/api --platform managed --memory=512Mi

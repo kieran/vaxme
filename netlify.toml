@@ -17,7 +17,7 @@
 
   [[redirects]]
     from = "/postal_code_at/*"
-    to = "https://api-xbhormaofa-ue.a.run.app/:splat"
+    to = "https://api-vuzaujnphq-ue.a.run.app/:splat"
     status = 200
 
 # Here is another way to define context specific environment variables.
@@ -27,7 +27,7 @@
 
   [[redirects]]
     from = "/postal_code_at/*"
-    to = "https://api-xbhormaofa-ue.a.run.app/:splat"
+    to = "https://api-vuzaujnphq-ue.a.run.app/:splat"
     status = 200
 
 # The following redirect is intended for use with most SPA's that handles routing internally.
