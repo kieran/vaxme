@@ -29,7 +29,15 @@ class Application extends React.Component
   available_providers: ->
     (p for p in @providers() when p.filter @props)
 
-  other_providers: ->
+  first_choice: ->
+    [first, rest...] = @available_providers()
+    first
+
+  other_choices: ->
+    [first, rest...] = @available_providers()
+    rest
+
+  ineligible_providers: ->
     (p for p in @providers() when not p.filter @props)
 
   render: ->
@@ -81,7 +89,7 @@ class Application extends React.Component
     </div>
 
   best_bet: ->
-    return null unless p = @available_providers()?[0]
+    return null unless p = @first_choice()
     <>
       <h1>Your best bet</h1>
       <Provider
@@ -94,10 +102,10 @@ class Application extends React.Component
     </>
 
   other_available: ->
-    rest = @available_providers()?[1..]
+    rest = @other_choices()
     return null unless rest.length
     <>
-      <h1>You also qualify for</h1>
+      <h1>You are also eligible for</h1>
       {for p in rest
         <Provider
           key={p.name}
@@ -110,10 +118,17 @@ class Application extends React.Component
     </>
 
   not_available: ->
-    others = @other_providers()
+    others = @ineligible_providers()
     return null unless others.length
     <>
-      <h1>You may still qualify</h1>
+      <h1>
+        {if @first_choice()
+          'You may also be eligible for'
+        else
+          'You may still be eligible'
+        }
+      </h1>
+
       <div className="notice">
         <p>You may be a member of a priority group.</p>
         <p>
