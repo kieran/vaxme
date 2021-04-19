@@ -286,8 +286,8 @@ export default [
     region_code: 'PE'
     name: 'PEI Health Authority'
     booking_url: 'https://www.princeedwardisland.ca/en/information/health-and-wellness/getting-covid-19-vaccine'
-    min_age: 55
-    updated_at: '2021-04-17'
+    min_age: 50
+    updated_at: '2021-04-19'
   })
 ,
   new Pharmacy({
