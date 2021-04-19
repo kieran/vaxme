@@ -40,7 +40,7 @@ stop_mongo:
 seed_mongo:
 	mongo --host ${MONGO_URL} --eval "db.postal_codes.drop()"
 
-	@cat ./data/postal_codes.json | \
+	@gunzip -c ./data/postal_codes.json.gz | \
 	jq --compact-output '[ .features[] | select(.type == "Feature") | { geometry, properties: { postal_code: .properties.CFSAUID, province_name: .properties.PRNAME } } ]' | \
 	mongoimport --db vaxme -c postal_codes --jsonArray
 
