@@ -20,9 +20,7 @@ class YearInput extends React.Component
     placeholder:  '1969'
 
   onChange: (evt)=>
-    val = evt?.target?.value
-
-    if COMPLETE_PAT.test val
+    if COMPLETE_PAT.test val = evt?.target?.value
       @props.onChange val
       # hide keyboard on phones:
       evt?.target?.blur?() if probablyMobile
