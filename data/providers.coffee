@@ -91,8 +91,8 @@ export default [
     region_code: 'BC'
     name: 'BC Health Care System'
     booking_url: 'https://www2.gov.bc.ca/gov/content/covid-19/vaccine/register'
-    min_age: 45
-    updated_at: '2021-04-17'
+    min_age: 40
+    updated_at: '2021-04-19'
   })
 ,
   new Pharmacy({
@@ -112,9 +112,12 @@ export default [
   new Province({
     region_code: 'AB'
     name: 'Alberta Health Services'
+    description: md.render """
+      Calgary and Edmonton residents 55+ may also be eligible.
+    """
     booking_url: 'https://myhealth.alberta.ca/Journey/Immunization/Pages/CovidImmPubTool.aspx'
     min_age: 65
-    updated_at: '2021-04-17'
+    updated_at: '2021-04-19'
   })
 ,
   new Pharmacy({
@@ -124,10 +127,12 @@ export default [
       Many pharmacies in Alberta are participating in vaccination programs.
 
       Calgary and Edmonton residents 55+ may also be eligible to book at some pharmacies.
+
+      The minimum age is being reduced to 40 on Tuesday April 20.
     """
     booking_url: 'https://www.ab.bluecross.ca/news/covid-19-immunization-program-information.php'
     min_age: 65
-    updated_at: '2021-04-17'
+    updated_at: '2021-04-19'
   })
 ,
 
@@ -157,8 +162,8 @@ export default [
     region_code: 'MB'
     name: 'Super-Sites and Pop-up Clinics'
     info_url: 'https://www.gov.mb.ca/covid19/vaccine/eligibility-criteria.html#sites'
-    min_age: 56
-    updated_at: '2021-04-17'
+    min_age: 54
+    updated_at: '2021-04-19'
   })
 ,
   new Pharmacy({
@@ -168,8 +173,8 @@ export default [
       Many clinics and pharmacies in Manitoba are participating in vaccination programs.
     """
     info_url: 'https://www.gov.mb.ca/covid19/vaccine/eligibility-criteria.html#clinics-pharmacies'
-    min_age: 65
-    updated_at: '2021-04-17'
+    min_age: 40
+    updated_at: '2021-04-19'
   })
 ,
 
@@ -227,7 +232,7 @@ export default [
   new Clinic({
     region_code: 'QC'
     name: 'Vaccine Clinics'
-    description: """
+    description: md.render """
       Clinics have been set up where people between 55 and 79 years of age can get the AstraZeneca vaccine. See the details for the vaccination clinic nearest to you.
     """
     info_url: 'https://www.quebec.ca/en/health/health-issues/a-z/2019-coronavirus/progress-of-the-covid-19-vaccination#c91979'
@@ -237,7 +242,7 @@ export default [
 ,
 
   # NB
-  # - https://www2.gnb.ca/content/gnb/en/corporate/promo/covid-19/nb-vaccine/Get-Vaccinated.html
+  # https://www2.gnb.ca/content/gnb/en/corporate/promo/covid-19/nb-vaccine/Get-Vaccinated.html
   new Province({
     region_code: 'NB'
     name: 'New Brunswick Health Authority'
@@ -259,7 +264,7 @@ export default [
 ,
 
   # NL
-  #
+  # https://www.gov.nl.ca/covid-19/vaccine/gettheshot/
   new Province({
     region_code: 'NL'
     name: 'Newfoundland Health Authority'
@@ -270,7 +275,7 @@ export default [
 ,
 
   # NS
-  #
+  # https://novascotia.ca/coronavirus/book-your-vaccination-appointment/
   new Province({
     region_code: 'NS'
     name: 'Nova Scotia Health Authority'
@@ -285,7 +290,13 @@ export default [
   new Province({
     region_code: 'PE'
     name: 'PEI Health Authority'
+    description: md.render """
+      PEI has several priority groups to which you may belong.
+
+      Read more about PEI's [phase 2 rollout schedule](https://www.princeedwardisland.ca/en/information/health-and-wellness/covid-19-vaccines-and-immunization-phased-approach)
+    """
     booking_url: 'https://www.princeedwardisland.ca/en/information/health-and-wellness/getting-covid-19-vaccine'
+    info_url: 'https://www.princeedwardisland.ca/en/information/health-and-wellness/covid-19-vaccines-and-immunization-phased-approach'
     min_age: 50
     updated_at: '2021-04-19'
   })
