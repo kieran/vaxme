@@ -188,10 +188,12 @@ export default [
     name: 'Select Pharmacies'
     description: md.render """
       Many pharmacies in Ontario are participating in vaccination programs.
+
+      The minium age is being reduced from 55 to 40 on Tuesday April 20.
     """
     booking_url: 'https://covid-19.ontario.ca/vaccine-locations'
     min_age: 55
-    updated_at: '2021-04-17'
+    updated_at: '2021-04-18'
   })
 ,
   new Clinic({
