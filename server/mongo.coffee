@@ -17,13 +17,10 @@ module.exports = postalCodeAt = (lat, lng)->
             coordinates: [ parseFloat(lng), parseFloat(lat) ]
     )
 
-    console.log [ parseFloat(lng), parseFloat(lat) ]
-    console.log doc
-
     if postal_code = doc?.properties?.postal_code
       resolve postal_code
     else
-      reject 'Not Found lol'
+      reject 'Not Found'
 
 module.exports.connect = connect = ->
   console.log 'Connecting to mongo...'
