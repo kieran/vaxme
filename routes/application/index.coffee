@@ -84,7 +84,7 @@ class Application extends React.Component
       <label>Your birth year</label>
       <YearInput
         onChange={@props.setBirthYear}
-        value={@props.birth_year}
+        value={"#{@props.birth_year}" or null}
       />
     </div>
 
@@ -96,7 +96,7 @@ class Application extends React.Component
         key={p.name}
         provider={p}
         postal_code={@props.postal_code}
-        birth_year={@props.birth_year}
+        birth_year={"#{@props.birth_year}" or null}
         available={true}
       />
     </>
@@ -111,7 +111,7 @@ class Application extends React.Component
           key={p.name}
           provider={p}
           postal_code={@props.postal_code}
-          birth_year={@props.birth_year}
+          birth_year={"#{@props.birth_year}" or null}
           available={true}
         />
       }
@@ -131,15 +131,13 @@ class Application extends React.Component
 
       <div className="notice">
         <p>You may be a member of a priority group.</p>
-        <p>
-          Examples include:
-          <ul>
-            <li>Frontline health care workers</li>
-            <li>People with high-risk health conditions</li>
-            <li>Residents, staff and essential caregivers in long-term care homes</li>
-            <li>First Nations, Métis, or Inuit people</li>
-          </ul>
-        </p>
+        <p>Examples include:</p>
+        <ul>
+          <li>Frontline health care workers</li>
+          <li>People with high-risk health conditions</li>
+          <li>Residents, staff and essential caregivers in long-term care homes</li>
+          <li>First Nations, Métis, or Inuit people</li>
+        </ul>
         <p>Please consult the links below for more information.</p>
       </div>
       {for p in others
@@ -147,7 +145,7 @@ class Application extends React.Component
           key={p.name}
           provider={p}
           postal_code={@props.postal_code}
-          birth_year={@props.birth_year}
+          birth_year={"#{@props.birth_year}" or null}
           available={false}
         />
       }

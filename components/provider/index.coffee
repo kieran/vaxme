@@ -8,7 +8,7 @@ export default \
 class Provider extends React.Component
   @propTypes:
     postal_code:  PropTypes.string.isRequired
-    birth_year:   PropTypes.number.isRequired
+    birth_year:   PropTypes.string.isRequired
     available:    PropTypes.bool
 
   @defaultProps:
@@ -30,7 +30,7 @@ class Provider extends React.Component
 
   min_age: ->
     return null unless min_age = @props.provider.min_age
-    age_met = @props.provider.filter_age birth_year: @props.birth_year
+    age_met = @props.provider.filter_age birth_year: parseFloat @props.birth_year
     <p className="min-age">
       {if age_met then "✅ " else "🚫 "}
       Minimum age: <strong>{min_age}</strong>

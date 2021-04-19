@@ -26,7 +26,7 @@ class PostalCodeInput extends React.Component
 
   onChange: (evt)=>
     postal_code = evt?.target?.value?.toUpperCase?()
-    @props.onChange postal_code if COMPLETE_PAT.test postal_code
+    @props.onChange postal_code if postal_code is '' or COMPLETE_PAT.test postal_code
 
   render: ->
     <input

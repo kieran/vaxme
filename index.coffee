@@ -26,12 +26,27 @@ do ->
     {latitude, longitude} = position.coords
     {latitude, longitude}
 
-  getPosalCode = (lat, lng)->
+  getPostalCode = (lat, lng)->
     { data } = await axios.get "#{process.env.API_URL}/#{lat.toFixed 3},#{lng.toFixed 3}"
     data
 
   fixVh = ->
     document.documentElement.style.setProperty '--vh', "#{window.innerHeight * 0.01}px"
+
+  lastCode = ->
+    try
+      localStorage.getItem 'postal_code'
+
+  lastYear = ->
+    try
+      localStorage.getItem 'birth_year'
+
+  remember = (obj={})->
+    for key, val of obj
+      try
+        localStorage.setItem key, val
+        localStorage.removeItem key unless val
+
 
   class App extends React.Component
     constructor: ->
@@ -39,13 +54,11 @@ do ->
       @state =
         locating: false
         geoError: null
-        postal_code: null
-        birth_year: null
-        # postal_code: 'M6K'
-        # birth_year: 1979
+        postal_code: lastCode() or null
+        birth_year: lastYear() or null
 
     componentDidMount: ->
-      @autoLocate()
+      @autoLocate() unless @state.postal_code
       fixVh()
       window.addEventListener 'resize', throttle fixVh, 200
 
@@ -53,7 +66,7 @@ do ->
       try
         @setState locating: true
         {latitude, longitude} = await getLocation()
-        if latitude and longitude and postal_code = await getPosalCode latitude, longitude
+        if latitude and longitude and postal_code = await getPostalCode latitude, longitude
           gtag 'event', 'postal_code-select-auto', event_category: 'engagement', event_label: postal_code
           @setPostalCode postal_code
       catch err
@@ -64,10 +77,12 @@ do ->
         @setState locating: false
 
     setPostalCode: (postal_code)=>
+      remember { postal_code }
       @setState { postal_code }
 
     setBirthYear: (birth_year)=>
       birth_year = parseFloat birth_year
+      remember { birth_year }
       @setState { birth_year }
 
     render: ->

@@ -12,7 +12,7 @@ export default \
 class YearInput extends React.Component
   @propTypes:
     onChange:     PropTypes.func.isRequired
-    value:        PropTypes.number
+    value:        PropTypes.string
     placeholder:  PropTypes.string
 
   @defaultProps:
