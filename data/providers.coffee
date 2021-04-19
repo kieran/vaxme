@@ -128,7 +128,7 @@ export default [
 
       Calgary and Edmonton residents 55+ may also be eligible to book at some pharmacies.
 
-      The minimum age is being reduced to 40 on Tuesday April 20.
+      **The minimum age is being reduced to 40 on Tuesday April 20**
     """
     booking_url: 'https://www.ab.bluecross.ca/news/covid-19-immunization-program-information.php'
     min_age: 65
@@ -194,7 +194,7 @@ export default [
     description: md.render """
       Many pharmacies in Ontario are participating in vaccination programs.
 
-      The minimum age is being reduced from 55 to 40 on Tuesday April 20.
+      **The minimum age is being reduced to 40 on Tuesday April 20**
     """
     booking_url: 'https://covid-19.ontario.ca/vaccine-locations'
     min_age: 55
