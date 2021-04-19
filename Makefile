@@ -40,12 +40,11 @@ stop_mongo:
 seed_mongo:
 	mongo --host ${MONGO_URL} --eval "db.postal_codes.drop()"
 
+	mongo --host ${MONGO_URL} --eval 'db.postal_codes.createIndex({ geometry: "2dsphere" })'
+
 	@gunzip -c ./data/postal_codes.json.gz | \
 	jq --compact-output '[ .features[] | select(.type == "Feature") | { geometry, properties: { postal_code: .properties.CFSAUID, province_name: .properties.PRNAME } } ]' | \
 	mongoimport --db vaxme -c postal_codes --jsonArray
-
-	# TODO: fix index creation
-	mongo --host ${MONGO_URL} --eval 'db.postal_codes.createIndex({ geometry: "2dsphere" })'
 
 docker_build:
 	docker image build --platform x86_64 -t vaxmeca:1.0 .
