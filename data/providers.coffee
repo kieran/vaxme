@@ -91,8 +91,8 @@ export default [
     region_code: 'BC'
     name: 'BC Health Care System'
     booking_url: 'https://www2.gov.bc.ca/gov/content/covid-19/vaccine/register'
-    min_age: 40
-    updated_at: '2021-04-19'
+    min_age: 35
+    updated_at: '2021-04-20'
   })
 ,
   new Pharmacy({
@@ -102,8 +102,8 @@ export default [
       Many pharmacies in BC are participating in vaccination programs.
     """
     booking_url: 'https://www2.gov.bc.ca/gov/content/covid-19/vaccine/pharmacy'
-    min_age: 55
-    updated_at: '2021-04-17'
+    min_age: 40
+    updated_at: '2021-04-20'
   })
 ,
 
@@ -125,14 +125,10 @@ export default [
     name: 'Select Pharmacies'
     description: md.render """
       Many pharmacies in Alberta are participating in vaccination programs.
-
-      Calgary and Edmonton residents 55+ may also be eligible to book at some pharmacies.
-
-      **The minimum age is being reduced to 40 on Tuesday April 20**
     """
     booking_url: 'https://www.ab.bluecross.ca/news/covid-19-immunization-program-information.php'
-    min_age: 65
-    updated_at: '2021-04-19'
+    min_age: 40
+    updated_at: '2021-04-20'
   })
 ,
 
@@ -193,12 +189,10 @@ export default [
     name: 'Select Pharmacies'
     description: md.render """
       Many pharmacies in Ontario are participating in vaccination programs.
-
-      **The minimum age is being reduced to 40 on Tuesday April 20**
     """
     booking_url: 'https://covid-19.ontario.ca/vaccine-locations'
-    min_age: 55
-    updated_at: '2021-04-18'
+    min_age: 40
+    updated_at: '2021-04-20'
   })
 ,
   new Clinic({
