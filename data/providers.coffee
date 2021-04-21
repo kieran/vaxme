@@ -91,8 +91,8 @@ export default [
     region_code: 'BC'
     name: 'BC Health Care System'
     booking_url: 'https://www2.gov.bc.ca/gov/content/covid-19/vaccine/register'
-    min_age: 35
-    updated_at: '2021-04-20'
+    min_age: 30
+    updated_at: '2021-04-21'
   })
 ,
   new Pharmacy({
@@ -158,8 +158,8 @@ export default [
     region_code: 'MB'
     name: 'Super-Sites and Pop-up Clinics'
     info_url: 'https://www.gov.mb.ca/covid19/vaccine/eligibility-criteria.html#sites'
-    min_age: 54
-    updated_at: '2021-04-19'
+    min_age: 50
+    updated_at: '2021-04-21'
   })
 ,
   new Pharmacy({
@@ -241,8 +241,8 @@ export default [
     region_code: 'NB'
     name: 'New Brunswick Health Authority'
     booking_url: 'https://www.gnb.ca/nosearch/vacc/index-e.html'
-    min_age: 70
-    updated_at: '2021-04-17'
+    min_age: 65
+    updated_at: '2021-04-21'
   })
 ,
   new Pharmacy({
@@ -252,8 +252,8 @@ export default [
       Many pharmacies in Ontario are participating in vaccination programs.
     """
     booking_url: 'https://www2.gnb.ca/content/gnb/en/corporate/promo/covid-19/nb-vaccine/Get-Vaccinated/vaccine-pharmacy.html'
-    min_age: 70
-    updated_at: '2021-04-17'
+    min_age: 65
+    updated_at: '2021-04-21'
   })
 ,
 
