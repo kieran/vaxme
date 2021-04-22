@@ -91,8 +91,8 @@ export default [
     region_code: 'BC'
     name: 'BC Health Care System'
     booking_url: 'https://www2.gov.bc.ca/gov/content/covid-19/vaccine/register'
-    min_age: 30
-    updated_at: '2021-04-21'
+    min_age: 25
+    updated_at: '2021-04-22'
   })
 ,
   new Pharmacy({
@@ -138,17 +138,16 @@ export default [
     region_code: 'SK'
     name: 'Saskatchewan Health Authority'
     booking_url: 'https://www.saskatchewan.ca/government/health-care-administration-and-provider-resources/treatment-procedures-and-guidelines/emerging-public-health-issues/2019-novel-coronavirus/covid-19-vaccine/vaccine-booking#check-your-eligibility'
-    min_age: 48
-    updated_at: '2021-04-17'
+    min_age: 44
+    updated_at: '2021-04-22'
   })
 ,
   new Clinic({
     region_code: 'SK'
     name: 'Drive-Thru and Walk-in Clinics'
     info_url: 'https://www.saskhealthauthority.ca/news/service-alerts-emergency-events/Pages/COVID-19-Vaccine-Drive-Thru-Wait-Times.aspx'
-    min_age: 48
-    max_age: 54
-    updated_at: '2021-04-17'
+    min_age: 44
+    updated_at: '2021-04-22'
   })
 ,
 
@@ -230,8 +229,8 @@ export default [
       Clinics have been set up where people between 55 and 79 years of age can get the AstraZeneca vaccine. See the details for the vaccination clinic nearest to you.
     """
     info_url: 'https://www.quebec.ca/en/health/health-issues/a-z/2019-coronavirus/progress-of-the-covid-19-vaccination#c91979'
-    min_age: 55
-    updated_at: '2021-04-17'
+    min_age: 45
+    updated_at: '2021-04-22'
   })
 ,
 
@@ -302,8 +301,8 @@ export default [
       Many pharmacies in PEI are participating in vaccination programs.
     """
     info_url: 'https://www.princeedwardisland.ca/en/information/booking-your-covid-19-appointment-at-a-pharmacy'
-    min_age: 55
-    updated_at: '2021-04-17'
+    min_age: 50
+    updated_at: '2021-04-22'
   })
 ,
 
