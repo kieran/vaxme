@@ -91,8 +91,8 @@ export default [
     region_code: 'BC'
     name: 'BC Health Care System'
     booking_url: 'https://www2.gov.bc.ca/gov/content/covid-19/vaccine/register'
-    min_age: 25
-    updated_at: '2021-04-22'
+    min_age: 18
+    updated_at: '2021-04-24'
   })
 ,
   new Pharmacy({
@@ -146,8 +146,8 @@ export default [
     region_code: 'SK'
     name: 'Drive-Thru and Walk-in Clinics'
     info_url: 'https://www.saskhealthauthority.ca/news/service-alerts-emergency-events/Pages/COVID-19-Vaccine-Drive-Thru-Wait-Times.aspx'
-    min_age: 44
-    updated_at: '2021-04-22'
+    min_age: 40
+    updated_at: '2021-04-24'
   })
 ,
 
@@ -262,8 +262,8 @@ export default [
     region_code: 'NL'
     name: 'Newfoundland Health Authority'
     booking_url: 'https://www.gov.nl.ca/covid-19/vaccine/gettheshot/'
-    min_age: 70
-    updated_at: '2021-04-17'
+    min_age: 55
+    updated_at: '2021-04-24'
   })
 ,
 
