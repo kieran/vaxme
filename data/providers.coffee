@@ -116,8 +116,8 @@ export default [
       Calgary and Edmonton residents 55+ may also be eligible.
     """
     booking_url: 'https://myhealth.alberta.ca/Journey/Immunization/Pages/CovidImmPubTool.aspx'
-    min_age: 65
-    updated_at: '2021-04-19'
+    min_age: 40
+    updated_at: '2021-04-26'
   })
 ,
   new Pharmacy({
@@ -138,16 +138,22 @@ export default [
     region_code: 'SK'
     name: 'Saskatchewan Health Authority'
     booking_url: 'https://www.saskatchewan.ca/government/health-care-administration-and-provider-resources/treatment-procedures-and-guidelines/emerging-public-health-issues/2019-novel-coronavirus/covid-19-vaccine/vaccine-booking#check-your-eligibility'
+    description: """
+      40 YEARS OF AGE AND OLDER in the Northern Saskatchewan Administration District
+    """
     min_age: 44
-    updated_at: '2021-04-22'
+    updated_at: '2021-04-26'
   })
 ,
   new Clinic({
     region_code: 'SK'
     name: 'Drive-Thru and Walk-in Clinics'
     info_url: 'https://www.saskhealthauthority.ca/news/service-alerts-emergency-events/Pages/COVID-19-Vaccine-Drive-Thru-Wait-Times.aspx'
-    min_age: 40
-    updated_at: '2021-04-24'
+    description: """
+      40 YEARS OF AGE AND OLDER in the Northern Saskatchewan Administration District
+    """
+    min_age: 44
+    updated_at: '2021-04-26'
   })
 ,
 
@@ -284,14 +290,23 @@ export default [
     region_code: 'PE'
     name: 'PEI Health Authority'
     description: md.render """
-      PEI has several priority groups to which you may belong.
+      **Rollout schedule for 40-49 year olds**
+
+      The first day of bookings is based on your birth month:
+
+      - Monday: January – March
+      - Tuesday: April - June
+      - Wednesday: July - September
+      - Thursday: October - December
+
+      PEI also has several priority groups to which you may belong.
 
       Read more about PEI's [phase 2 rollout schedule](https://www.princeedwardisland.ca/en/information/health-and-wellness/covid-19-vaccines-and-immunization-phased-approach)
     """
     booking_url: 'https://www.princeedwardisland.ca/en/information/health-and-wellness/getting-covid-19-vaccine'
     info_url: 'https://www.princeedwardisland.ca/en/information/health-and-wellness/covid-19-vaccines-and-immunization-phased-approach'
-    min_age: 50
-    updated_at: '2021-04-19'
+    min_age: 40
+    updated_at: '2021-04-26'
   })
 ,
   new Pharmacy({
@@ -301,8 +316,8 @@ export default [
       Many pharmacies in PEI are participating in vaccination programs.
     """
     info_url: 'https://www.princeedwardisland.ca/en/information/booking-your-covid-19-appointment-at-a-pharmacy'
-    min_age: 50
-    updated_at: '2021-04-22'
+    min_age: 55
+    updated_at: '2021-04-26'
   })
 ,
 
