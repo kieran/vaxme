@@ -141,8 +141,8 @@ export default [
     description: """
       40 YEARS OF AGE AND OLDER in the Northern Saskatchewan Administration District
     """
-    min_age: 44
-    updated_at: '2021-04-26'
+    min_age: 42
+    updated_at: '2021-04-29'
   })
 ,
   new Clinic({
@@ -152,8 +152,8 @@ export default [
     description: """
       40 YEARS OF AGE AND OLDER in the Northern Saskatchewan Administration District
     """
-    min_age: 44
-    updated_at: '2021-04-26'
+    min_age: 42
+    updated_at: '2021-04-29'
   })
 ,
 
@@ -246,8 +246,8 @@ export default [
     region_code: 'NB'
     name: 'New Brunswick Health Authority'
     booking_url: 'https://www.gnb.ca/nosearch/vacc/index-e.html'
-    min_age: 65
-    updated_at: '2021-04-21'
+    min_age: 60
+    updated_at: '2021-04-29'
   })
 ,
   new Pharmacy({
@@ -257,8 +257,8 @@ export default [
       Many pharmacies in Ontario are participating in vaccination programs.
     """
     booking_url: 'https://www2.gnb.ca/content/gnb/en/corporate/promo/covid-19/nb-vaccine/Get-Vaccinated/vaccine-pharmacy.html'
-    min_age: 65
-    updated_at: '2021-04-21'
+    min_age: 60
+    updated_at: '2021-04-29'
   })
 ,
 
