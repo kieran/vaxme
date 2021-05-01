@@ -102,8 +102,8 @@ export default [
       Many pharmacies in BC are participating in vaccination programs.
     """
     booking_url: 'https://www2.gov.bc.ca/gov/content/covid-19/vaccine/pharmacy'
-    min_age: 40
-    updated_at: '2021-04-20'
+    min_age: 30
+    updated_at: '2021-05-01'
   })
 ,
 
@@ -141,8 +141,8 @@ export default [
     description: """
       40 YEARS OF AGE AND OLDER in the Northern Saskatchewan Administration District
     """
-    min_age: 42
-    updated_at: '2021-04-29'
+    min_age: 40
+    updated_at: '2021-05-01'
   })
 ,
   new Clinic({
@@ -150,10 +150,10 @@ export default [
     name: 'Drive-Thru and Walk-in Clinics'
     info_url: 'https://www.saskhealthauthority.ca/news/service-alerts-emergency-events/Pages/COVID-19-Vaccine-Drive-Thru-Wait-Times.aspx'
     description: """
-      40 YEARS OF AGE AND OLDER in the Northern Saskatchewan Administration District
+      30 YEARS OF AGE AND OLDER in the Northern Saskatchewan Administration District
     """
-    min_age: 42
-    updated_at: '2021-04-29'
+    min_age: 40
+    updated_at: '2021-05-01'
   })
 ,
 
@@ -172,10 +172,12 @@ export default [
     name: 'Medical Clinics and Pharmacies'
     description: md.render """
       Many clinics and pharmacies in Manitoba are participating in vaccination programs.
+
+      30+ may be eligible if you meet certain medical criteria - see the link below.
     """
     info_url: 'https://www.gov.mb.ca/covid19/vaccine/eligibility-criteria.html#clinics-pharmacies'
     min_age: 40
-    updated_at: '2021-04-19'
+    updated_at: '2021-05-01'
   })
 ,
 
@@ -224,8 +226,8 @@ export default [
     region_code: 'QC'
     name: 'Québec Health Services'
     info_url: 'https://www.quebec.ca/en/health/health-issues/a-z/2019-coronavirus/progress-of-the-covid-19-vaccination#c92384'
-    min_age: 60
-    updated_at: '2021-04-17'
+    min_age: 50
+    updated_at: '2021-05-01'
   })
 ,
   new Clinic({
@@ -279,8 +281,8 @@ export default [
     region_code: 'NS'
     name: 'Nova Scotia Health Authority'
     booking_url: 'https://novascotia.ca/coronavirus/book-your-vaccination-appointment/'
-    min_age: 55
-    updated_at: '2021-04-17'
+    min_age: 40
+    updated_at: '2021-05-01'
   })
 ,
 
@@ -290,7 +292,7 @@ export default [
     region_code: 'PE'
     name: 'PEI Health Authority'
     description: md.render """
-      **Rollout schedule for 40-49 year olds**
+      **Rollout schedule for 30-39 year olds**
 
       The first day of bookings is based on your birth month:
 
@@ -306,7 +308,7 @@ export default [
     booking_url: 'https://www.princeedwardisland.ca/en/information/health-and-wellness/getting-covid-19-vaccine'
     info_url: 'https://www.princeedwardisland.ca/en/information/health-and-wellness/covid-19-vaccines-and-immunization-phased-approach'
     min_age: 40
-    updated_at: '2021-04-26'
+    updated_at: '2021-05-01'
   })
 ,
   new Pharmacy({
