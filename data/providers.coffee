@@ -226,8 +226,17 @@ export default [
     region_code: 'QC'
     name: 'Québec Health Services'
     info_url: 'https://www.quebec.ca/en/health/health-issues/a-z/2019-coronavirus/progress-of-the-covid-19-vaccination#c92384'
-    min_age: 50
-    updated_at: '2021-05-01'
+    description: md.render """
+      Upcoming dates:
+
+      - May 5, 2021: 40 years+
+      - May 7, 2021: 35 years+
+      - May 10, 2021: 30 years+
+      - May 12, 2021: 25 years+
+      - May 14, 2021: 18 years+
+    """
+    min_age: 45
+    updated_at: '2021-05-03'
   })
 ,
   new Clinic({
@@ -307,8 +316,8 @@ export default [
     """
     booking_url: 'https://www.princeedwardisland.ca/en/information/health-and-wellness/getting-covid-19-vaccine'
     info_url: 'https://www.princeedwardisland.ca/en/information/health-and-wellness/covid-19-vaccines-and-immunization-phased-approach'
-    min_age: 40
-    updated_at: '2021-05-01'
+    min_age: 30
+    updated_at: '2021-05-03'
   })
 ,
   new Pharmacy({
