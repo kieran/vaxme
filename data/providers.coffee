@@ -141,8 +141,8 @@ export default [
     description: """
       40 YEARS OF AGE AND OLDER in the Northern Saskatchewan Administration District
     """
-    min_age: 40
-    updated_at: '2021-05-01'
+    min_age: 37
+    updated_at: '2021-05-04'
   })
 ,
   new Clinic({
@@ -152,8 +152,8 @@ export default [
     description: """
       30 YEARS OF AGE AND OLDER in the Northern Saskatchewan Administration District
     """
-    min_age: 40
-    updated_at: '2021-05-01'
+    min_age: 37
+    updated_at: '2021-05-04'
   })
 ,
 
@@ -187,8 +187,8 @@ export default [
     region_code: 'ON'
     name: 'Ontario Health Services'
     booking_url: 'https://covid-19.ontario.ca/book-vaccine/'
-    min_age: 60
-    updated_at: '2021-04-17'
+    min_age: 55
+    updated_at: '2021-05-04'
   })
 ,
   new Pharmacy({
@@ -257,8 +257,8 @@ export default [
     region_code: 'NB'
     name: 'New Brunswick Health Authority'
     booking_url: 'https://www.gnb.ca/nosearch/vacc/index-e.html'
-    min_age: 60
-    updated_at: '2021-04-29'
+    min_age: 50
+    updated_at: '2021-05-04'
   })
 ,
   new Pharmacy({
