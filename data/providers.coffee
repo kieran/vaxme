@@ -112,12 +112,9 @@ export default [
   new Province({
     region_code: 'AB'
     name: 'Alberta Health Services'
-    description: md.render """
-      Calgary and Edmonton residents 55+ may also be eligible.
-    """
     booking_url: 'https://myhealth.alberta.ca/Journey/Immunization/Pages/CovidImmPubTool.aspx'
-    min_age: 40
-    updated_at: '2021-04-26'
+    min_age: 12
+    updated_at: '2021-05-10'
   })
 ,
   new Pharmacy({
@@ -127,8 +124,8 @@ export default [
       Many pharmacies in Alberta are participating in vaccination programs.
     """
     booking_url: 'https://www.ab.bluecross.ca/news/covid-19-immunization-program-information.php'
-    min_age: 40
-    updated_at: '2021-04-20'
+    min_age: 12
+    updated_at: '2021-05-10'
   })
 ,
 
@@ -139,10 +136,10 @@ export default [
     name: 'Saskatchewan Health Authority'
     booking_url: 'https://www.saskatchewan.ca/government/health-care-administration-and-provider-resources/treatment-procedures-and-guidelines/emerging-public-health-issues/2019-novel-coronavirus/covid-19-vaccine/vaccine-booking#check-your-eligibility'
     description: """
-      40 YEARS OF AGE AND OLDER in the Northern Saskatchewan Administration District
+      18 YEARS OF AGE AND OLDER in the Northern Saskatchewan Administration District
     """
-    min_age: 37
-    updated_at: '2021-05-04'
+    min_age: 29
+    updated_at: '2021-05-10'
   })
 ,
   new Clinic({
@@ -150,10 +147,10 @@ export default [
     name: 'Drive-Thru and Walk-in Clinics'
     info_url: 'https://www.saskhealthauthority.ca/news/service-alerts-emergency-events/Pages/COVID-19-Vaccine-Drive-Thru-Wait-Times.aspx'
     description: """
-      30 YEARS OF AGE AND OLDER in the Northern Saskatchewan Administration District
+      18 YEARS OF AGE AND OLDER in the Northern Saskatchewan Administration District
     """
-    min_age: 37
-    updated_at: '2021-05-04'
+    min_age: 29
+    updated_at: '2021-05-10'
   })
 ,
 
@@ -163,8 +160,8 @@ export default [
     region_code: 'MB'
     name: 'Super-Sites and Pop-up Clinics'
     info_url: 'https://www.gov.mb.ca/covid19/vaccine/eligibility-criteria.html#sites'
-    min_age: 50
-    updated_at: '2021-04-21'
+    min_age: 30
+    updated_at: '2021-05-10'
   })
 ,
   new Pharmacy({
@@ -187,8 +184,8 @@ export default [
     region_code: 'ON'
     name: 'Ontario Health Services'
     booking_url: 'https://covid-19.ontario.ca/book-vaccine/'
-    min_age: 55
-    updated_at: '2021-05-04'
+    min_age: 50
+    updated_at: '2021-05-10'
   })
 ,
   new Pharmacy({
@@ -229,25 +226,33 @@ export default [
     description: md.render """
       Upcoming dates:
 
-      - May 5, 2021: 40 years+
-      - May 7, 2021: 35 years+
-      - May 10, 2021: 30 years+
       - May 12, 2021: 25 years+
       - May 14, 2021: 18 years+
     """
-    min_age: 45
-    updated_at: '2021-05-03'
+    min_age: 30
+    updated_at: '2021-05-10'
   })
 ,
   new Clinic({
     region_code: 'QC'
     name: 'Vaccine Clinics'
     description: md.render """
-      Clinics have been set up where people between 55 and 79 years of age can get the AstraZeneca vaccine. See the details for the vaccination clinic nearest to you.
+      Clinics have been set up where people 45+ years of age can get the AstraZeneca vaccine. See the details for the vaccination clinic nearest to you.
     """
     info_url: 'https://www.quebec.ca/en/health/health-issues/a-z/2019-coronavirus/progress-of-the-covid-19-vaccination#c91979'
     min_age: 45
     updated_at: '2021-04-22'
+  })
+,
+  new Pharmacy({
+    region_code: 'QC'
+    name: 'Select Pharmacies'
+    description: md.render """
+      Many pharmacies in Quebec are participating in vaccination programs. Conditions
+    """
+    info_url: 'https://www.quebec.ca/en/health/health-issues/a-z/2019-coronavirus/progress-of-the-covid-19-vaccination#c91979'
+    min_age: 18
+    updated_at: '2021-05-10'
   })
 ,
 
@@ -301,7 +306,7 @@ export default [
     region_code: 'PE'
     name: 'PEI Health Authority'
     description: md.render """
-      **Rollout schedule for 30-39 year olds**
+      **Rollout schedule for 16-29 year olds**
 
       The first day of bookings is based on your birth month:
 
@@ -316,8 +321,8 @@ export default [
     """
     booking_url: 'https://www.princeedwardisland.ca/en/information/health-and-wellness/getting-covid-19-vaccine'
     info_url: 'https://www.princeedwardisland.ca/en/information/health-and-wellness/covid-19-vaccines-and-immunization-phased-approach'
-    min_age: 30
-    updated_at: '2021-05-03'
+    min_age: 16
+    updated_at: '2021-05-10'
   })
 ,
   new Pharmacy({
@@ -327,8 +332,8 @@ export default [
       Many pharmacies in PEI are participating in vaccination programs.
     """
     info_url: 'https://www.princeedwardisland.ca/en/information/booking-your-covid-19-appointment-at-a-pharmacy'
-    min_age: 55
-    updated_at: '2021-04-26'
+    min_age: 50
+    updated_at: '2021-05-10'
   })
 ,
 
