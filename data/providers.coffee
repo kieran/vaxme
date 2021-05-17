@@ -95,17 +95,17 @@ export default [
     updated_at: '2021-04-24'
   })
 ,
-  new Pharmacy({
-    region_code: 'BC'
-    name: 'Select Pharmacies'
-    description: md.render """
-      Many pharmacies in BC are participating in vaccination programs.
-    """
-    booking_url: 'https://www2.gov.bc.ca/gov/content/covid-19/vaccine/pharmacy'
-    min_age: 30
-    updated_at: '2021-05-01'
-  })
-,
+#   new Pharmacy({
+#     region_code: 'BC'
+#     name: 'Select Pharmacies'
+#     description: md.render """
+#       Many pharmacies in BC are participating in vaccination programs.
+#     """
+#     booking_url: 'https://www2.gov.bc.ca/gov/content/covid-19/vaccine/pharmacy'
+#     min_age: 30
+#     updated_at: '2021-05-01'
+#   })
+# ,
 
   # AB
   # https://www.albertahealthservices.ca/topics/page17295.aspx
@@ -138,8 +138,8 @@ export default [
     description: """
       18 YEARS OF AGE AND OLDER in the Northern Saskatchewan Administration District
     """
-    min_age: 29
-    updated_at: '2021-05-10'
+    min_age: 20
+    updated_at: '2021-05-17'
   })
 ,
   new Clinic({
@@ -149,8 +149,8 @@ export default [
     description: """
       18 YEARS OF AGE AND OLDER in the Northern Saskatchewan Administration District
     """
-    min_age: 29
-    updated_at: '2021-05-10'
+    min_age: 20
+    updated_at: '2021-05-17'
   })
 ,
 
@@ -160,8 +160,8 @@ export default [
     region_code: 'MB'
     name: 'Super-Sites and Pop-up Clinics'
     info_url: 'https://www.gov.mb.ca/covid19/vaccine/eligibility-criteria.html#sites'
-    min_age: 30
-    updated_at: '2021-05-10'
+    min_age: 12
+    updated_at: '2021-05-17'
   })
 ,
   new Pharmacy({
@@ -184,8 +184,8 @@ export default [
     region_code: 'ON'
     name: 'Ontario Health Services'
     booking_url: 'https://covid-19.ontario.ca/book-vaccine/'
-    min_age: 50
-    updated_at: '2021-05-10'
+    min_age: 40
+    updated_at: '2021-05-17'
   })
 ,
   new Pharmacy({
@@ -223,14 +223,8 @@ export default [
     region_code: 'QC'
     name: 'Québec Health Services'
     info_url: 'https://www.quebec.ca/en/health/health-issues/a-z/2019-coronavirus/progress-of-the-covid-19-vaccination#c92384'
-    description: md.render """
-      Upcoming dates:
-
-      - May 12, 2021: 25 years+
-      - May 14, 2021: 18 years+
-    """
-    min_age: 30
-    updated_at: '2021-05-10'
+    min_age: 18
+    updated_at: '2021-05-17'
   })
 ,
   new Clinic({
@@ -262,19 +256,19 @@ export default [
     region_code: 'NB'
     name: 'New Brunswick Health Authority'
     booking_url: 'https://www.gnb.ca/nosearch/vacc/index-e.html'
-    min_age: 50
-    updated_at: '2021-05-04'
+    min_age: 30
+    updated_at: '2021-05-17'
   })
 ,
   new Pharmacy({
     region_code: 'NB'
     name: 'Select Pharmacies'
     description: md.render """
-      Many pharmacies in Ontario are participating in vaccination programs.
+      Many pharmacies in New Brunswick are participating in vaccination programs.
     """
     booking_url: 'https://www2.gnb.ca/content/gnb/en/corporate/promo/covid-19/nb-vaccine/Get-Vaccinated/vaccine-pharmacy.html'
-    min_age: 60
-    updated_at: '2021-04-29'
+    min_age: 30
+    updated_at: '2021-05-17'
   })
 ,
 
@@ -284,8 +278,8 @@ export default [
     region_code: 'NL'
     name: 'Newfoundland Health Authority'
     booking_url: 'https://www.gov.nl.ca/covid-19/vaccine/gettheshot/'
-    min_age: 55
-    updated_at: '2021-04-24'
+    min_age: 12
+    updated_at: '2021-05-17'
   })
 ,
 
@@ -295,8 +289,8 @@ export default [
     region_code: 'NS'
     name: 'Nova Scotia Health Authority'
     booking_url: 'https://novascotia.ca/coronavirus/book-your-vaccination-appointment/'
-    min_age: 40
-    updated_at: '2021-05-01'
+    min_age: 30
+    updated_at: '2021-05-17'
   })
 ,
 
@@ -305,20 +299,6 @@ export default [
   new Province({
     region_code: 'PE'
     name: 'PEI Health Authority'
-    description: md.render """
-      **Rollout schedule for 16-29 year olds**
-
-      The first day of bookings is based on your birth month:
-
-      - Monday: January – March
-      - Tuesday: April - June
-      - Wednesday: July - September
-      - Thursday: October - December
-
-      PEI also has several priority groups to which you may belong.
-
-      Read more about PEI's [phase 2 rollout schedule](https://www.princeedwardisland.ca/en/information/health-and-wellness/covid-19-vaccines-and-immunization-phased-approach)
-    """
     booking_url: 'https://www.princeedwardisland.ca/en/information/health-and-wellness/getting-covid-19-vaccine'
     info_url: 'https://www.princeedwardisland.ca/en/information/health-and-wellness/covid-19-vaccines-and-immunization-phased-approach'
     min_age: 16
@@ -332,8 +312,8 @@ export default [
       Many pharmacies in PEI are participating in vaccination programs.
     """
     info_url: 'https://www.princeedwardisland.ca/en/information/booking-your-covid-19-appointment-at-a-pharmacy'
-    min_age: 50
-    updated_at: '2021-05-10'
+    min_age: 40
+    updated_at: '2021-05-17'
   })
 ,
 
