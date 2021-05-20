@@ -91,8 +91,8 @@ export default [
     region_code: 'BC'
     name: 'BC Health Care System'
     booking_url: 'https://www2.gov.bc.ca/gov/content/covid-19/vaccine/register'
-    min_age: 18
-    updated_at: '2021-04-24'
+    min_age: 12
+    updated_at: '2021-05-20'
   })
 ,
 #   new Pharmacy({
@@ -135,22 +135,16 @@ export default [
     region_code: 'SK'
     name: 'Saskatchewan Health Authority'
     booking_url: 'https://www.saskatchewan.ca/government/health-care-administration-and-provider-resources/treatment-procedures-and-guidelines/emerging-public-health-issues/2019-novel-coronavirus/covid-19-vaccine/vaccine-booking#check-your-eligibility'
-    description: """
-      18 YEARS OF AGE AND OLDER in the Northern Saskatchewan Administration District
-    """
-    min_age: 20
-    updated_at: '2021-05-17'
+    min_age: 12
+    updated_at: '2021-05-20'
   })
 ,
   new Clinic({
     region_code: 'SK'
     name: 'Drive-Thru and Walk-in Clinics'
     info_url: 'https://www.saskhealthauthority.ca/news/service-alerts-emergency-events/Pages/COVID-19-Vaccine-Drive-Thru-Wait-Times.aspx'
-    description: """
-      18 YEARS OF AGE AND OLDER in the Northern Saskatchewan Administration District
-    """
-    min_age: 20
-    updated_at: '2021-05-17'
+    min_age: 12
+    updated_at: '2021-05-20'
   })
 ,
 
@@ -184,8 +178,8 @@ export default [
     region_code: 'ON'
     name: 'Ontario Health Services'
     booking_url: 'https://covid-19.ontario.ca/book-vaccine/'
-    min_age: 40
-    updated_at: '2021-05-17'
+    min_age: 18
+    updated_at: '2021-05-20'
   })
 ,
   new Pharmacy({
@@ -255,9 +249,10 @@ export default [
   new Province({
     region_code: 'NB'
     name: 'New Brunswick Health Authority'
+    info_url: 'https://www2.gnb.ca/content/gnb/en/corporate/promo/covid-19/nb-vaccine.html'
     booking_url: 'https://www.gnb.ca/nosearch/vacc/index-e.html'
-    min_age: 30
-    updated_at: '2021-05-17'
+    min_age: 18
+    updated_at: '2021-05-20'
   })
 ,
   new Pharmacy({
@@ -266,9 +261,10 @@ export default [
     description: md.render """
       Many pharmacies in New Brunswick are participating in vaccination programs.
     """
-    booking_url: 'https://www2.gnb.ca/content/gnb/en/corporate/promo/covid-19/nb-vaccine/Get-Vaccinated/vaccine-pharmacy.html'
-    min_age: 30
-    updated_at: '2021-05-17'
+    info_url: 'https://www2.gnb.ca/content/gnb/en/corporate/promo/covid-19/nb-vaccine.html'
+    booking_url: 'https://www2.gnb.ca/content/gnb/en/corporate/promo/covid-19/nb-vaccine/vaccine-pharmacy.html'
+    min_age: 18
+    updated_at: '2021-05-20'
   })
 ,
 
@@ -289,8 +285,8 @@ export default [
     region_code: 'NS'
     name: 'Nova Scotia Health Authority'
     booking_url: 'https://novascotia.ca/coronavirus/book-your-vaccination-appointment/'
-    min_age: 30
-    updated_at: '2021-05-17'
+    min_age: 25
+    updated_at: '2021-05-20'
   })
 ,
 
@@ -299,10 +295,10 @@ export default [
   new Province({
     region_code: 'PE'
     name: 'PEI Health Authority'
-    booking_url: 'https://www.princeedwardisland.ca/en/information/health-and-wellness/getting-covid-19-vaccine'
+    booking_url: 'https://pe.skipthewaitingroom.com/walk-in-clinic-provider/covid-vaccination-clinic'
     info_url: 'https://www.princeedwardisland.ca/en/information/health-and-wellness/covid-19-vaccines-and-immunization-phased-approach'
-    min_age: 16
-    updated_at: '2021-05-10'
+    min_age: 12
+    updated_at: '2021-05-20'
   })
 ,
   new Pharmacy({
